@@ -2,8 +2,8 @@ from web import db
 from web.model import PpMsg
 
 
-def add_msg(id, msg, content):
-    msg = PpMsg(id=id, msg=msg, content=content)
+def add_msg(msgid, msg, content):
+    msg = PpMsg(id=msgid, msg=msg, content=content)
     db.session.add(msg)
     db.session.commit()
 
