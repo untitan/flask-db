@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>消息</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <td>编号(总共:{{ msg_list|length }})</td>
+        <td>消息</td>
+        <td>内容</td>
+    </tr>
+    {% for msg in msg_list %}
+        <tr>
+            <td>{{ msg.id }}</td>
+            <td>{{ msg.msg }}</td>
+            <td>{{ msg.content }}</td>
+        </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
